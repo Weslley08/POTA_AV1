@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div id="alerta">
+        <p>Você deve selecionar uma forma de vizualização!</p>
+    </div>
+    <form action="" id="form">
+        <main>
+            <section>
+                <h2>Adicione um item à lista:</h2>
+                <div>
+                    <input type="text" name="nome" id="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+                        placeholder="Digite apenas letras" required>
+                    <input type="submit" onclick="inserir()" value="Inserir">
+                </div>
+                <input type="button" onclick="limpar()" value="Limpar">
+            </section>
+            <section>
+                <h3>Escolha a forma de vizualização:</h3>
+                <div>
+                    <input name="opcao" type="radio" value="lista" id="lista">
+                    <label for="lista">Lista</label>
+                </div>
+                <div>
+                    <input name="opcao" type="radio" value="pilha" id="pilha">
+                    <label for="pilha">Pilha</label>
+                </div>
+            </section>
+
+            <div class="content">
+                <h3>Resultado:</h3>
+                <table aria-label="table" border="3">
+                    <thead>
+                        <th>Palavra</th>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </main>
+    </form>
+</body>
+
+</html>
